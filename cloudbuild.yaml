@@ -19,3 +19,13 @@ steps:
   - 'discover'
   waitFor:
   - INSTALL
+  - name: python:3.7
+  entrypoint: python3
+  id: RUN-LINTER-CHECK
+  args:
+  - '-m'
+  - 'flake8'
+  - '--ignore=E501'
+  - 'functions/'
+  waitFor:
+  - INSTALL
