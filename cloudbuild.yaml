@@ -9,7 +9,7 @@ steps:
   - '-t'
   - '.'
   - '-r'
-  - 'flask-app/requirements.txt'
+  - 'requirements.txt'
 - name: python:3.7
   entrypoint: python3
   id: RUN-UNIT-TESTS
