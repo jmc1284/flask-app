@@ -15,8 +15,9 @@ steps:
   id: RUN-UNIT-TESTS
   args:
   - '-m'
-  - 'unittest'
-  - 'discover'
+  - 'nose2'
+  - '-s'
+  - 'flask-app'
   waitFor:
   - INSTALL
 - name: python:3.7
