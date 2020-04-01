@@ -19,7 +19,7 @@ steps:
   - 'discover'
   waitFor:
   - INSTALL
-  - name: python:3.7
+- name: python:3.7
   entrypoint: python3
   id: RUN-LINTER-CHECK
   args:
@@ -28,4 +28,4 @@ steps:
   - '--ignore=E501'
   - 'functions/'
   waitFor:
-  - INSTALL
+  - RUN-UNIT-TESTS
