@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+    	<form method="POST" action="{{ url_for('retirement') }}">
+    		{{ form.hidden_tag() }}
+    		<fieldset class="form-group">
+    			<div class="form-group">
+    				{{ form.age.label(class="form-control-label") }}
+
+    				{% if form.age.errors %}
+    					{{ form.age(class="form-control form-control-lg is-invalid") }}
+    					<div class="invalid-feedback">
+    						{% for error in form.age.errors %}
+    							<span>{{ error }}</span>
+    						{% endfor %}
+    					</div>
+    				{% else %}
+    					{{ form.age(class="form-control form-control-lg") }}
+    				{% endif %}
+
+    			</div>
+    			<div class="form-group">
+    				{{ form.salary.label(class="form-control-label") }}
+
+    				{% if form.salary.errors %}
+    					{{ form.salary(class="form-control form-control-lg is-invalid") }}
+    					<div class="invalid-feedback">
+    						{% for error in form.salary.errors %}
+    							<span>{{ error }}</span>
+    						{% endfor %}
+    					</div>
+    				{% else %}
+    					{{ form.salary(class="form-control form-control-lg") }}
+    				{% endif %}
+    			</div>
+    			<div class="form-group">
+    				{{ form.percentage.label(class="form-control-label") }}
+
+    				{% if form.percentage.errors %}
+    					{{ form.percentage(class="form-control form-control-lg is-invalid") }}
+    					<div class="invalid-feedback">
+    						{% for error in form.percentage.errors %}
+    							<span>{{ error }}</span>
+    						{% endfor %}
+    					</div>
+    				{% else %}
+    					{{ form.percentage(class="form-control form-control-lg") }}
+    				{% endif %}
+    			</div>
+    			<div class="form-group">
+    				{{ form.goal.label(class="form-control-label") }}
+
+    				{% if form.goal.errors %}
+    					{{ form.goal(class="form-control form-control-lg is-invalid") }}
+    					<div class="invalid-feedback">
+    						{% for error in form.goal.errors %}
+    							<span>{{ error }}</span>
+    						{% endfor %}
+    					</div>
+    				{% else %}
+    					{{ form.goal(class="form-control form-control-lg") }}
+    				{% endif %}
+    			</div>
+    		</fieldset>
+    		<div class="form-group">
+    			{{ form.submit(class="btn btn-outline-info") }}
+    		</div>
+    	</form>
+    </div>
+{% endblock content %}

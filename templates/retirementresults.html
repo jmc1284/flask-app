@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% if retirement_age > 100 %}
+		<h2 class="container">
+    		You will die before you reach your retirement savings goal.
+    	</h2>
+	{% else %}
+		<h2 class="container">
+    		Your retirement age will be {{ retirement_age }} when you reach your savings goal of ${{ goal }}.
+    	</h2>
+	{% endif %}
+{% endblock content %}
