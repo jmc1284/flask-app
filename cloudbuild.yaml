@@ -15,9 +15,8 @@ steps:
   id: RUN-UNIT-TESTS
   args:
   - '-m'
-  - 'nose2'
-  - '-s'
-  - 'flask-app'
+  - 'unittest'
+  - 'test_bmi'
   waitFor:
   - INSTALL
 - name: python:3.7
