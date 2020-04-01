@@ -26,5 +26,6 @@ steps:
   - '-m'
   - 'flake8'
   - '--ignore=E501'
+  - 'flask-app/'
   waitFor:
   - RUN-UNIT-TESTS
