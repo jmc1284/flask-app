@@ -17,6 +17,7 @@ steps:
   - '-m'
   - 'unittest'
   - 'test_bmi'
+  - 'test_retirement'
   waitFor:
   - INSTALL
 - name: python:3.7
